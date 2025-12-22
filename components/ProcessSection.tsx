@@ -42,7 +42,7 @@ const steps = [
 
 export const ProcessSection = () => {
   return (
-    <section id="process" className="py-24 lg:py-32 relative bg-card/30">
+    <section id="Services" className="py-24 lg:py-32 relative bg-card/30">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
@@ -51,7 +51,8 @@ export const ProcessSection = () => {
             How We <span className="gradient-text">Work With You</span>
           </h2>
           <p className="text-muted-foreground">
-            From idea to production, a clear, repeatable process to build your platform.
+            From idea to production, a clear, repeatable process to build your
+            platform.
           </p>
         </AnimatedSection>
 
@@ -59,9 +60,7 @@ export const ProcessSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <AnimatedSection key={step.number} delay={index * 100}>
-              <div 
-                className="relative p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group card-glow h-full"
-              >
+              <div className="relative p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group card-glow h-full">
                 {/* Step Number */}
                 <div className="flex items-center gap-4 mb-4">
                   <span className="text-4xl font-heading font-bold text-primary/20 group-hover:text-primary/40 transition-colors">

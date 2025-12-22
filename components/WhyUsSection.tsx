@@ -46,22 +46,26 @@ export const WhyUsSection = () => {
               Why Clients <span className="gradient-text">Choose Us</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              iTeller combines deep technical expertise, market understanding, and 
-              proven systems to help fintech, crypto, and AI ventures launch faster 
-              and scale confidently.
+              iTeller combines deep technical expertise, market understanding,
+              and proven systems to help fintech, crypto, and AI ventures launch
+              faster and scale confidently.
             </p>
 
             {/* Certifications */}
             <div className="flex gap-4">
               {certifications.map((cert) => (
-                <div 
+                <div
                   key={cert.sublabel}
                   className="flex items-center gap-3 px-4 py-3 rounded-xl bg-card border border-border"
                 >
                   <Award className="w-8 h-8 text-primary" />
                   <div>
-                    <div className="font-semibold text-sm text-foreground">{cert.label}</div>
-                    <div className="text-xs text-muted-foreground">{cert.sublabel}</div>
+                    <div className="font-semibold text-sm text-foreground">
+                      {cert.label}
+                    </div>
+                    <div className="text-xs text-muted-foreground">
+                      {cert.sublabel}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -71,12 +75,14 @@ export const WhyUsSection = () => {
           {/* Right Column - Benefits */}
           <div className="space-y-4">
             {benefits.map((benefit, index) => (
-              <AnimatedSection key={benefit.title} direction="right" delay={index * 100}>
-                <div 
-                  className="p-5 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group card-glow"
-                >
+              <AnimatedSection
+                key={benefit.title}
+                direction="right"
+                delay={index * 100}
+              >
+                <div className="p-5 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group card-glow">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                       <benefit.icon className="w-5 h-5 text-primary" />
                     </div>
                     <div>

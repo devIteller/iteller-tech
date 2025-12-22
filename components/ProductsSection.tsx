@@ -57,8 +57,8 @@ export const ProductsSection = () => {
             Flagship <span className="gradient-text">Platforms</span>
           </h2>
           <p className="text-muted-foreground">
-            Pre-built, battle-tested platforms designed for white-label and custom deployments 
-            to accelerate your fintech roadmap.
+            Pre-built, battle-tested platforms designed for white-label and
+            custom deployments to accelerate your fintech roadmap.
           </p>
         </AnimatedSection>
 
@@ -66,18 +66,24 @@ export const ProductsSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {platforms.map((platform, index) => (
             <AnimatedSection key={platform.title} delay={index * 100}>
-              <div 
+              <div
                 className={`relative p-6 rounded-2xl border transition-all duration-300 card-glow group h-full
-                  ${platform.featured 
-                    ? 'bg-gradient-to-br from-primary/10 to-card border-primary/30' 
-                    : 'bg-card border-border hover:border-primary/30'
+                  ${
+                    platform.featured
+                      ? "bg-linear-to-br from-primary/10 to-card border-primary/30"
+                      : "bg-card border-border hover:border-primary/30"
                   }`}
               >
                 {/* Icon */}
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4
-                  ${platform.featured ? 'bg-primary/20' : 'bg-muted'}`}
+                <div
+                  className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4
+                  ${platform.featured ? "bg-primary/20" : "bg-muted"}`}
                 >
-                  <platform.icon className={`w-6 h-6 ${platform.featured ? 'text-primary' : 'text-secondary'}`} />
+                  <platform.icon
+                    className={`w-6 h-6 ${
+                      platform.featured ? "text-primary" : "text-secondary"
+                    }`}
+                  />
                 </div>
 
                 {/* Content */}
@@ -91,7 +97,7 @@ export const ProductsSection = () => {
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {platform.tags.map((tag) => (
-                    <span 
+                    <span
                       key={tag}
                       className="px-2 py-1 text-xs rounded-md bg-muted text-muted-foreground"
                     >

@@ -15,7 +15,7 @@ export const CTASection = () => {
         <AnimatedSection>
           <div className="relative rounded-3xl overflow-hidden">
             {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-card via-muted/50 to-card" />
+            <div className="absolute inset-0 bg-linear-to-br from-card via-muted/50 to-card" />
             <div 
               className="absolute inset-0 opacity-[0.03]"
               style={{
@@ -28,7 +28,7 @@ export const CTASection = () => {
             <div className="relative px-8 py-16 lg:py-24 text-center">
               <span className="section-label mb-4 block">Get Started</span>
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6 max-w-3xl mx-auto">
-                Let's Build Your Next{" "}
+                Let&apos;s Build Your Next{" "}
                 <span className="gradient-text">Fintech or AI Product</span>
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto mb-10">
