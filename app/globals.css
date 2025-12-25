@@ -129,7 +129,7 @@
   }
 
   .section-label {
-    @apply text-xs font-semibold tracking-widest uppercase;
+    @apply text-sm font-bold tracking-widest uppercase;
     color: hsl(var(--primary));
   }
 }

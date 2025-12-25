@@ -1,96 +1,197 @@
-import { Brain, Coins, Landmark } from "lucide-react";
+import {
+  Brain,
+  Coins,
+  Landmark,
+  Bot,
+  ShieldCheck,
+  Banknote,
+  CreditCard,
+  LucideIcon,
+  ArrowRightLeft,
+  ChartNoAxesCombined,
+  TrendingUp,
+  CircleDollarSign,
+} from "lucide-react";
 import { AnimatedSection } from "./AnimatedSection";
 
-const solutionCategories = [
+type Solution = {
+  name: string;
+  description: string;
+  icon: LucideIcon;
+};
+
+type SolutionCategory = {
+  title: string;
+  icon: LucideIcon;
+  accent: "primary" | "gold";
+  solutions: Solution[];
+};
+
+const solutionCategories: SolutionCategory[] = [
   {
     title: "AI & Data Solutions",
     icon: Brain,
+    accent: "primary",
     solutions: [
-      { name: "AI Trading Bots", description: "Algorithmic trading for stocks, forex, crypto, and multi-asset strategies", tags: ["Stocks", "Forex"] },
-      { name: "AI Agents & Assistants", description: "Intelligent assistants for KYC, AML, customer support, and compliance", tags: ["NLP", "ML"] },
-      { name: "Industry AI", description: "Custom AI solutions for healthcare, education, e-commerce, logistics, and supply chain", tags: ["Enterprise"] },
+      {
+        name: "AI Trading Suite",
+        icon: TrendingUp,
+        description:
+          "Algorithmic trading for crypto, forex & stocks with AI-driven signals",
+      },
+      {
+        name: "AI Agents & Assistants",
+        icon: Bot,
+        description: "Multilingual support, KYC guidance & internal copilots",
+      },
+      {
+        name: "Industry AI",
+        icon: ShieldCheck,
+        description:
+          "Risk scoring, fraud detection, healthcare triage & marketing AI",
+      },
     ],
   },
   {
     title: "Blockchain & Crypto",
     icon: Coins,
+    accent: "gold",
     solutions: [
-      { name: "CEX & DEX Development", description: "Crypto exchange frontend, orderbook, orderbook matching, token listing, and staking", tags: ["Exchange"] },
-      { name: "Tokenization & RWA", description: "Real-world asset tokenization, smart contracts, fractional ownership, and NFTs", tags: ["RWA", "STO"] },
-      { name: "Crypto OTC Platforms", description: "P2P and OTC trading platforms for high-volume crypto transactions", tags: ["P2P", "OTC"] },
+      {
+        name: "CEX & DEX Development",
+        icon: ArrowRightLeft,
+        description: "Order-book engines, AMM, liquidity pools & copy trading",
+      },
+      {
+        name: "Tokenization & RWA",
+        icon: Coins,
+        description:
+          "Real-world asset tokenization, smart contracts & investor portals",
+      },
+      {
+        name: "Crypto OTC Platforms",
+        icon: ChartNoAxesCombined,
+        description: "Spot, futures & hybrid ETFs with NAV calculation",
+      },
     ],
   },
   {
     title: "Banking & Payments",
     icon: Landmark,
+    accent: "primary",
     solutions: [
-      { name: "Neobank Platform", description: "Digital banking with account opening, card issuance, and KYC/AML", tags: ["Digital Bank"] },
-      { name: "Payment Gateway", description: "Secure payment processing infrastructure for fintechs and e-commerce", tags: ["Payments"] },
-      { name: "Investment Platforms", description: "Wealth management, robo-advisory, and portfolio management solutions", tags: ["Wealth"] },
+      {
+        name: "Neobank Platform",
+        icon: Banknote,
+        description:
+          "Digital onboarding, multi-currency accounts & crypto integration",
+      },
+      {
+        name: "Payment Gateway",
+        icon: CreditCard,
+        description: "Escrow payments, milestones & crypto payment rails",
+      },
+      {
+        name: "Investment Platforms",
+        icon: CircleDollarSign,
+        description: "Wealth management, robo-advisory & portfolio analytics",
+      },
     ],
   },
 ];
 
+const accentTokens = {
+  primary: {
+    base: "bg-primary/10 text-primary",
+    hoverBorder: "hover:border-primary/30",
+    hoverText: "group-hover:text-primary",
+  },
+  gold: {
+    base: "bg-[#232423] text-[#F7C630]",
+    hoverBorder: "hover:border-[#F7C630]/30",
+    hoverText: "group-hover:text-[#F7C630]",
+  },
+};
+
 export const SolutionsSection = () => {
   return (
-    <section id="solutions" className="py-24 lg:py-32 relative bg-card/30">
+    <section id="solutions" className="relative bg-card/30 py-24 lg:py-32">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
-        <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
+        <AnimatedSection className="mx-auto mb-16 max-w-3xl text-center">
           <span className="section-label mb-4 block">Core Solutions</span>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+
+          <h2 className="font-heading mb-6 text-3xl font-bold md:text-4xl lg:text-5xl">
             End-to-End Engineering for{" "}
             <span className="gradient-text">Digital Finance & AI</span>
           </h2>
+
           <p className="text-muted-foreground">
-            Full-cycle development—from MVPs to fully production-ready apps for AI, 
-            smart contracts, trading, integrations, SWIFT/ACH, and custom API systems.
+            Full-cycle development – from feasibility study and tokenomics to
+            UX/UI,
+            <br />
+            smart contracts, core engine, integrations, KYC/AML and production
+            support.
           </p>
         </AnimatedSection>
 
-        {/* Solutions Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {solutionCategories.map((category, categoryIndex) => (
-            <AnimatedSection key={category.title} delay={categoryIndex * 150}>
-              {/* Category Header */}
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <category.icon className="w-5 h-5 text-primary" />
-                </div>
-                <h3 className="font-heading font-semibold text-lg text-foreground">
-                  {category.title}
-                </h3>
-              </div>
+        {/* Grid */}
+        <div className="grid gap-6 md:grid-cols-3">
+          {solutionCategories.map((category, categoryIndex) => {
+            const Icon = category.icon;
+            const accent = accentTokens[category.accent];
 
-              {/* Solutions List */}
-              <div className="space-y-4">
-                {category.solutions.map((solution, solutionIndex) => (
-                  <AnimatedSection key={solution.name} delay={categoryIndex * 150 + solutionIndex * 100 + 200}>
-                    <div 
-                      className="p-5 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group card-glow"
-                    >
-                      <h4 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                        {solution.name}
-                      </h4>
-                      <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
-                        {solution.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {solution.tags.map((tag) => (
-                          <span 
-                            key={tag}
-                            className="px-2 py-1 text-xs rounded-md bg-muted text-muted-foreground"
+            return (
+              <AnimatedSection key={category.title} delay={categoryIndex * 150}>
+                {/* Category Header */}
+                <div className="mb-6 flex items-center gap-3">
+                  <div
+                    className={`flex h-14 w-14 items-center justify-center rounded-lg ${accent.base}`}
+                  >
+                    <Icon className="h-8 w-8" />
+                  </div>
+
+                  <h3 className="font-heading text-2xl font-bold">
+                    {category.title}
+                  </h3>
+                </div>
+
+                {/* Solutions */}
+                <div className="space-y-4">
+                  {category.solutions.map((solution, solutionIndex) => {
+                    const SolutionIcon = solution.icon;
+
+                    return (
+                      <AnimatedSection
+                        key={solution.name}
+                        delay={categoryIndex * 150 + solutionIndex * 100 + 200}
+                      >
+                        <div
+                          className={`group flex items-center h-[120px] gap-3 rounded-xl border-2 border-[#151B2B] bg-[#0B111D] p-5 transition-all duration-300 ${accent.hoverBorder}`}
+                        >
+                          <div
+                            className={`flex h-10 w-10 p-2 items-center justify-center rounded-lg ${accent.base}`}
                           >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </AnimatedSection>
-                ))}
-              </div>
-            </AnimatedSection>
-          ))}
+                            <SolutionIcon className="h-6 w-6" />
+                          </div>
+                          <div>
+                            <h4
+                              className={`text-lg font-semibold transition-colors ${accent.hoverText}`}
+                            >
+                              {solution.name}
+                            </h4>
+                            <p className="leading-relaxed text-muted-foreground">
+                              {solution.description}
+                            </p>
+                          </div>
+                        </div>
+                      </AnimatedSection>
+                    );
+                  })}
+                </div>
+              </AnimatedSection>
+            );
+          })}
         </div>
       </div>
     </section>
