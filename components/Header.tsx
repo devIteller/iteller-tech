@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/sheet";
 import Link from "next/link";
 import clsx from "clsx";
+import Image from "next/image";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -47,14 +48,12 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="font-heading font-bold text-primary-foreground">
-                iT
-              </span>
-            </div>
-            <span className="font-heading font-bold text-xl text-foreground">
-              iTeller
-            </span>
+            <Image
+              width={84}
+              height={51}
+              src={"/logo/iteller-tech-logo.svg"}
+              alt="iteller-tech-logo"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -63,7 +62,7 @@ export const Header = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm text-[#738BB1] hover:text-foreground transition-colors"
               >
                 {link.label}
               </a>
@@ -73,10 +72,10 @@ export const Header = () => {
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-4">
             <Button variant="ghost" size="sm">
-              Book Demo
+              Download Profile
             </Button>
             <Button variant="hero" size="sm">
-              Free Consultation
+              Book Consulation
             </Button>
           </div>
 
@@ -91,6 +90,29 @@ export const Header = () => {
               <SheetHeader>
                 <SheetTitle>iTeller</SheetTitle>
               </SheetHeader>
+
+              {/* Mobile Navigation */}
+              <nav className="mt-8 flex flex-col gap-4">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="text-base text-[#738BB1] hover:text-foreground transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+
+              {/* Mobile Actions */}
+              <div className="mt-8 flex flex-col gap-3">
+                <Button variant="ghost" className="w-full">
+                  Download Profile
+                </Button>
+                <Button variant="hero" className="w-full">
+                  Book Consultation
+                </Button>
+              </div>
             </SheetContent>
           </Sheet>
         </div>

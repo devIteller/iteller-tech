@@ -1,16 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Rocket, Sparkles } from "lucide-react";
+import { CountUpStat } from "./CountUpStat";
 
 const stats = [
-  { value: "10+", label: "Years of Excellence" },
-  { value: "50+", label: "Projects Delivered" },
-  { value: "99.9%", label: "Uptime Guaranteed" },
+  { value: 10, suffix: "+", label: "Uptime SLA" },
+  { value: 50, suffix: "+", label: "Projects Delivered" },
+  { value: 99.9, suffix: "%", label: "Years Experience" },
 ];
 
 const features = [
   { icon: Sparkles, label: "AI-Powered Solutions" },
-  { icon: Shield, label: "Enterprise Ready" },
-  { icon: Rocket, label: "Proactive Tech Team" },
+  { icon: Shield, label: "Enterprise Security" },
+  { icon: Rocket, label: "Production-Ready Code" },
 ];
 
 export const HeroSection = () => {
@@ -52,7 +53,7 @@ export const HeroSection = () => {
 
           {/* Subtitle */}
           <p
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in-up"
+            className="text-lg md:text-[17px] text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}
           >
             We design, build and launch end-to-end solutions – from AI trading
@@ -92,18 +93,11 @@ export const HeroSection = () => {
 
           {/* Stats */}
           <div
-            className="grid grid-cols-3 gap-8 max-w-xl mx-auto animate-fade-in-up"
+            className="grid grid-cols-3 gap-8 max-w-xl mx-auto"
             style={{ animationDelay: "0.5s" }}
           >
             {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-xs md:text-sm text-muted-foreground">
-                  {stat.label}
-                </div>
-              </div>
+              <CountUpStat key={stat.label} {...stat} />
             ))}
           </div>
         </div>
