@@ -1,4 +1,12 @@
-import { ArrowRight, LineChart, Coins, CreditCard, Shield, Database, Cpu } from "lucide-react";
+import {
+  ArrowRight,
+  LineChart,
+  Coins,
+  CreditCard,
+  Shield,
+  Cpu,
+  ArrowRightLeft,
+} from "lucide-react";
 import { AnimatedSection } from "./AnimatedSection";
 
 const platforms = [
@@ -25,24 +33,24 @@ const platforms = [
   },
   {
     icon: Shield,
-    title: "Payment Safe-Payment",
+    title: "Payroom Safe-Payment",
     description:
-      "A secure payment infrastructure for handling card transactions, bank transfers, digital wallets, and cryptocurrency payments.",
-    tags: ["Payments", "Card Processing"],
+      "A secure platform for B2B and B2C payments, milestone-based contracts, online cheques, recurring salaries and supplier payouts with crypto settlement.",
+    tags: ["Escrow Payments", "Crypto Rails", "Payroll Management"],
   },
   {
-    icon: Database,
+    icon: ArrowRightLeft,
     title: "CEX / DEX Infrastructure",
     description:
-      "Battle-tested exchange architecture for both centralized and decentralized trading platforms with high-frequency matching engines.",
-    tags: ["Exchange", "Matching Engine", "Liquidity"],
+      "Battle-tested exchange engines, order books, AMM pools, OTC desks and liquidity management tools ready to be customized for your jurisdiction.",
+    tags: ["Order Matching", "Liquidity Pools", "Copy Trading"],
   },
   {
     icon: Cpu,
     title: "Enterprise Tools & APIs",
     description:
-      "APIs, dashboards, document verification tools, AML/KYC integration, and risk assessment systems for enterprise compliance.",
-    tags: ["Compliance", "APIs"],
+      "KMS platforms, document workflows, CRM/ERP integrations and internal AI assistants that keep your knowledge, code and operations under control.",
+    tags: ["AI Assistants", "Document Workflows", "Integrations"],
   },
 ];
 
@@ -71,11 +79,11 @@ export const ProductsSection = () => {
                 bg-linear-to-b from-[#0E1628] to-[#090E19]
                 p-6 transition-all duration-300
                 hover:border-primary/30
-                hover:shadow-[0_0_40px_-15px_rgba(56,189,248,0.25)]"
+                hover:shadow-[0_0_40px_-15px_rgba(56,189,248,0.25)] group cursor-pointer"
               >
                 {/* Icon */}
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                  <platform.icon className="w-6 h-6 text-primary" />
+                  <platform.icon className="w-8 h-8 text-primary" />
                 </div>
 
                 {/* Content */}
@@ -100,12 +108,12 @@ export const ProductsSection = () => {
                 </div>
 
                 {/* CTA */}
-                <div className="flex justify-between">
-                  <button className="group inline-flex items-center gap-1 text-sm  transition-all">
+                <div className="flex justify-between ">
+                  <button className=" inline-flex items-center gap-1 text-sm transition-all">
                     Learn More
                   </button>
-                  <button className="group inline-flex items-center gap-1 text-sm  transition-all">
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  <button className=" inline-flex items-center gap-1 text-sm bg-white/5 rounded-full p-2  transition-all">
+                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </button>
                 </div>
               </div>

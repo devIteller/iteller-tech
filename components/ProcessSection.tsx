@@ -6,37 +6,43 @@ const steps = [
     number: "01",
     icon: Search,
     title: "Discovery & Feasibility",
-    description: "We analyze your concept, market position, competition, and technical requirements.",
+    description:
+      "Market & technical research, regulatory constraints, product strategy and high-level architecture.",
   },
   {
     number: "02",
     icon: Palette,
     title: "Product & Tokenomics Design",
-    description: "We design product features, UX/UI, and tokenomics tailored to your business.",
+    description:
+      "Business model, revenue streams, token design (utility, governance, RWA, DeFi) and compliance requirements.",
   },
   {
     number: "03",
     icon: Layout,
     title: "UX/UI & System Architecture",
-    description: "We create the wireframes, high-fidelity mockups, and define the system architecture.",
+    description:
+      "User flows, dashboards, admin tools, scalable micro-service architecture and DevOps design.",
   },
   {
     number: "04",
     icon: Code,
     title: "Development & Integration",
-    description: "Agile sprints with continuous development and third-party API integrations.",
+    description:
+      "Backend, frontend, mobile and smart contracts with KYC/AML, exchanges, banks and PSP integrations.",
   },
   {
     number: "05",
     icon: Shield,
     title: "Testing & Security Audit",
-    description: "Comprehensive QA, penetration testing, and security audits before deployment.",
+    description:
+      "Functional, load and penetration testing with support for third-party smart-contract audits.",
   },
   {
     number: "06",
     icon: Rocket,
     title: "Launch & Ongoing Support",
-    description: "Smooth deployment, monitoring, and ongoing optimization after launch.",
+    description:
+      "Production rollout, team training and SLA-based maintenance with feature upgrades.",
   },
 ];
 
@@ -51,7 +57,7 @@ export const ProcessSection = () => {
             How We <span className="gradient-text">Work With You</span>
           </h2>
           <p className="text-muted-foreground">
-            From idea to production, a clear, repeatable process to build your
+            From a one-page idea to a fully regulated, revenue-generating
             platform.
           </p>
         </AnimatedSection>
@@ -60,24 +66,25 @@ export const ProcessSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <AnimatedSection key={step.number} delay={index * 100}>
-              <div className="relative p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group card-glow h-full">
+              <div
+                className="relative p-6 rounded-2xl border border-white/5
+                bg-linear-to-b from-[#0E1628] to-[#090E19] hover:border-[#F7C630]/30 transition-all duration-300 group card-glow h-full"
+              >
                 {/* Step Number */}
                 <div className="flex items-center gap-4 mb-4">
-                  <span className="text-4xl font-heading font-bold text-primary/20 group-hover:text-primary/40 transition-colors">
+                  <span className="absolute -top-5 -left-3 bg-[#0D2330] font-semibold w-11 h-11 flex items-center justify-center text-sm rounded-full text-primary group-hover:text-[#F7C630]/40 transition-colors">
                     {step.number}
                   </span>
-                  <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
-                    <step.icon className="w-5 h-5 text-secondary" />
+                  <div className="w-10 h-10 rounded-lg bg-[#232423] text-[#F7C630] flex items-center justify-center">
+                    <step.icon className="w-5 h-5" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="font-heading font-semibold text-lg text-foreground mb-3">
+                <h3 className="font-heading font-semibold text-lg text-foreground mb-0.5">
                   {step.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {step.description}
-                </p>
+                <p className="text-[#738BB1]">{step.description}</p>
               </div>
             </AnimatedSection>
           ))}

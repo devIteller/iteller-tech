@@ -22,7 +22,7 @@ const buttonVariants = cva(
         hero: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:scale-105",
         heroOutline:
           "border-2 border-border bg-[#0C1421] text-foreground hover:bg-muted/50 hover:border-muted-foreground/50",
-        cta: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-xl shadow-primary/40 hover:shadow-primary/60 hover:scale-[1.02]",
+        cta: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/40 hover:shadow-primary/60 hover:scale-[1.02]",
       },
       size: {
         default: "h-10 px-4 py-2",

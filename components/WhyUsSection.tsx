@@ -2,35 +2,40 @@ import { Award, CheckCircle, Shield, Users, Zap } from "lucide-react";
 import { AnimatedSection } from "./AnimatedSection";
 
 const certifications = [
-  { label: "Certified", sublabel: "ISO 27001" },
-  { label: "Certified", sublabel: "SOC 2 Type II" },
+  { label: "Certified", sublabel: "Quality & Security" },
+  { label: "Certified", sublabel: "Quality & Security" },
 ];
 
 const benefits = [
   {
     icon: Shield,
     title: "Specialization in Financial Software",
-    description: "We focus exclusively on fintech, blockchain, and AI—no distractions from other verticals.",
+    description:
+      "We build only fintech, blockchain and AI-driven systems. This focus gives us deep understanding of trading, payments, risk and compliance.",
   },
   {
     icon: Zap,
-    title: "Proven Platforms on Production",
-    description: "Our platforms are running in production handling real transactions and real users.",
+    title: "Proven Platforms in Production",
+    description:
+      "Our exchange, payment, investment and tokenization platforms are already live with multiple clients and processing real transactions.",
   },
   {
     icon: CheckCircle,
     title: "Enterprise-grade Security",
-    description: "Information security and compliance are built into our DNA—SOC 2, ISO 27001, PCI DSS.",
+    description:
+      "Information-security and quality management certified, with strict SDLC, code review and DevOps practices protecting your assets.",
   },
   {
     icon: Users,
     title: "End-to-End Partner",
-    description: "From concept to launch and beyond—we're with you for the long haul.",
+    description:
+      "From white-paper and pitch deck to architecture, implementation and long-term scaling. We're with you every step of the way.",
   },
   {
     icon: Award,
     title: "Custom + White-Label",
-    description: "Get the best of both worlds: customizable platforms that accelerate your go-to-market.",
+    description:
+      "Start fast with our ready-made platforms or build something completely unique on top of our battle-tested components.",
   },
 ];
 
@@ -38,7 +43,7 @@ export const WhyUsSection = () => {
   return (
     <section className="py-24 lg:py-32 relative">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Column */}
           <AnimatedSection direction="left">
             <span className="section-label mb-4 block">Why iTeller</span>
@@ -46,24 +51,35 @@ export const WhyUsSection = () => {
               Why Clients <span className="gradient-text">Choose Us</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              iTeller combines deep technical expertise, market understanding,
-              and proven systems to help fintech, crypto, and AI ventures launch
-              faster and scale confidently.
+              We don&apos;t just write code – we design complete business
+              solutions with domain-specific logic, compliance and automation
+              that help you launch faster and scale confidently.
             </p>
 
             {/* Certifications */}
             <div className="flex gap-4">
-              {certifications.map((cert) => (
+              {certifications.map((cert, cartIndex) => (
                 <div
-                  key={cert.sublabel}
-                  className="flex items-center gap-3 px-4 py-3 rounded-xl bg-card border border-border"
+                  key={cartIndex + 1}
+                  className="flex items-center gap-3 p-4 rounded-xl border border-white/5
+                bg-linear-to-b from-[#0E1628] to-[#090E19]"
                 >
-                  <Award className="w-8 h-8 text-primary" />
+                  <div
+                    className={`w-10 h-10 rounded-lg ${
+                      cartIndex === 0
+                        ? "text-primary bg-primary/10"
+                        : "bg-[#232423] text-[#F7C630] "
+                    } flex items-center justify-center`}
+                  >
+                    <span className="text-xs font-semibold">
+                      {cartIndex === 0 ? "ISO" : "24/7"}
+                    </span>
+                  </div>
                   <div>
-                    <div className="font-semibold text-sm text-foreground">
+                    <div className="font-semibold text-foreground">
                       {cert.label}
                     </div>
-                    <div className="text-xs text-muted-foreground">
+                    <div className="text-xs mt-0.5 text-muted-foreground">
                       {cert.sublabel}
                     </div>
                   </div>
@@ -80,13 +96,16 @@ export const WhyUsSection = () => {
                 direction="right"
                 delay={index * 100}
               >
-                <div className="p-5 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group card-glow">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                      <benefit.icon className="w-5 h-5 text-primary" />
+                <div
+                  className="p-5 rounded-xl border border-white/5
+                bg-linear-to-b from-[#0E1628] to-[#090E19] hover:border-primary/30 transition-all duration-300 group card-glow"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <benefit.icon className="w-7 h-7 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
+                      <h3 className="font-semibold text-foreground mb-0.5 group-hover:text-primary transition-colors">
                         {benefit.title}
                       </h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">

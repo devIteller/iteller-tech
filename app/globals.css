@@ -132,6 +132,10 @@
     @apply text-sm font-bold tracking-widest uppercase;
     color: hsl(var(--primary));
   }
+
+  button {
+    @apply cursor-pointer;
+  }
 }
 
 /* ============================= */
