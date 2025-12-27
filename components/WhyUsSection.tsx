@@ -41,7 +41,7 @@ const benefits = [
 
 export const WhyUsSection = () => {
   return (
-    <section className="py-24 lg:py-32 relative">
+    <section id="Why-Us" className="py-24 lg:py-32 relative">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Column */}

@@ -11,7 +11,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
-import clsx from "clsx";
 import Image from "next/image";
 
 const navLinks = [
@@ -38,13 +37,13 @@ export const Header = () => {
     <>
       <header className="relative">
         <div
-          className={`container z-50 mx-auto px-4 lg:px-8 fixed top-0 left-0 transition-all duration-500 ease-out ${
+          className={` z-50 mx-auto px-4 lg:px-8 fixed top-0 left-0 right-0 transition-all duration-500 ease-out ${
             scrolled
               ? "bg-background/80 backdrop-blur-xl border-b py-0.5 "
               : "bg-transparent"
           }`}
         >
-          <div className="flex items-center justify-between h-16 lg:h-20">
+          <div className="flex container mx-auto items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
               <Image

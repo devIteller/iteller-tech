@@ -25,15 +25,15 @@ const contacts = [
 export default function CTASection() {
   return (
     <section id="contact" className="py-24 lg:py-32 relative">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container  mx-auto px-4 lg:px-8">
+        <div className="absolute z-5 top-28 left-96 w-[100px] h-[100px] opacity-50 rounded-full bg-primary blur-[100px]"></div>
+        <div className="absolute z-5 bottom-28 right-96 w-[100px] h-[100px] opacity-50 rounded-full bg-[#F7C630] blur-[90px]"></div>
         <AnimatedSection>
-          <div className="relative rounded-3xl max-w-5xl mx-auto overflow-hidden shadow-2xl">
-            {/* Dark gradient background + subtle border */}
+          <div className="relative  rounded-3xl max-w-5xl mx-auto overflow-hidden shadow-2xl">
             <div
               className="absolute inset-0 border border-white/5
                 bg-linear-to-b from-[#0E1628] to-[#090E19]"
             />
-
             {/* faint dot pattern */}
             <div
               className="absolute inset-0 opacity-5"
@@ -45,7 +45,7 @@ export default function CTASection() {
             />
 
             {/* Content */}
-            <div className="relative px-8 py-16 lg:py-24 text-center text-white">
+            <div className="relative px-8 py-12 text-center text-white">
               <span className="section-label mb-4 block">Get Started</span>
               <h2 className="font-heading text-3xl md:text-4xl lg:text-6xl font-bold mb-6 max-w-3xl mx-auto">
                 {" "}
@@ -74,7 +74,7 @@ export default function CTASection() {
 
                 <Button
                   variant="ghost"
-                  className="font-bold px-6 py-4 flex items-center text-black gap-3 shadow-lg rounded-lg border-yellow-400/10 bg-yellow-400"
+                  className="font-bold px-6 py-4 flex items-center text-black gap-3 shadow-lg rounded-lg border-yellow-400/10 bg-[#F7C630] hover:bg-[#F7C630]/60"
                   size="xl"
                 >
                   <Download className="w-4 h-4" />
