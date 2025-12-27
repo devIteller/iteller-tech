@@ -65,7 +65,7 @@ export default function CTASection() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                 <Button
                   variant="cta"
-                  className="font-bold px-6 py-4 flex items-center gap-3 shadow-lg rounded-lg bg-linear-to-r from-[#19D3FF] to-[#00B3E6] text-black"
+                  className="font-bold p-4 max-md:w-full lex items-center gap-3 shadow-lg rounded-lg bg-linear-to-r from-[#19D3FF] to-[#00B3E6] text-black"
                   size="xl"
                 >
                   <span>Schedule a Strategy Call</span>
@@ -74,7 +74,7 @@ export default function CTASection() {
 
                 <Button
                   variant="ghost"
-                  className="font-bold px-6 py-4 flex items-center text-black gap-3 shadow-lg rounded-lg border-yellow-400/10 bg-[#F7C630] hover:bg-[#F7C630]/60"
+                  className="font-bold p-4 max-md:w-full  flex items-center text-black gap-3 shadow-lg rounded-lg border-yellow-400/10 bg-[#F7C630] hover:bg-[#F7C630]/60"
                   size="xl"
                 >
                   <Download className="w-4 h-4" />
