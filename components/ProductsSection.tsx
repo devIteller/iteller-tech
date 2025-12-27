@@ -59,7 +59,7 @@ export const ProductsSection = () => {
     <section id="products" className="py-24 lg:py-32 relative">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
-        <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
+        <AnimatedSection className="lg:text-center max-w-3xl mx-auto mb-16">
           <span className="section-label mb-4 block">Our Products</span>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Flagship <span className="gradient-text">Platforms</span>

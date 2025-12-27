@@ -118,7 +118,7 @@ export const SolutionsSection = () => {
     <section id="solutions" className="relative bg-card/30 py-24 lg:py-32">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
-        <AnimatedSection className="mx-auto mb-16 max-w-3xl text-center">
+        <AnimatedSection className="mx-auto mb-16 max-w-3xl lg:text-center">
           <span className="section-label mb-4 block">Core Solutions</span>
 
           <h2 className="font-heading mb-6 text-3xl font-bold md:text-4xl lg:text-5xl">
