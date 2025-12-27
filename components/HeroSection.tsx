@@ -46,7 +46,10 @@ export const HeroSection = () => {
             style={{ animationDelay: "0.1s" }}
           >
             Building the Next Generation <br className="hidden md:block" />
-            of <span className="gradient-text">AI, Fintech & Blockchain</span>
+            of{" "}
+            <span className="gradient-text mr-1.5">
+              AI, Fintech & Blockchain
+            </span>
             <br className="hidden md:block" />
             Platforms
           </h1>
