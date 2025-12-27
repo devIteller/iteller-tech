@@ -16,7 +16,7 @@ const features = [
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden max-sm:pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden max-sm:py-20">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-[linear-gradient(137.65deg,#0E2C40_-4.98%,#080C16_64.62%)]" />
 

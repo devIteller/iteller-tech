@@ -50,7 +50,7 @@ export const AboutSection = () => {
             <h3 className="font-heading text-xl font-semibold mb-6 text-foreground">
               Our Team Includes
             </h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {techMetrics.map((metric, index) => (
                 <AnimatedSection key={metric.label} delay={300 + index * 100}>
                   <div className="flex h-16 items-center gap-1 p-2 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors duration-300">
