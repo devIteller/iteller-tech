@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export default function Error() {
 const router = useRouter();
   return (
-    <div className="flex h-screen w-screen flex-col items-center justify-center bg-background text-center p-6">
+    <div className="flex h-screen flex-col items-center justify-center bg-background text-center p-6 overflow-hidden">
       {/* Icon */}
       <div className="mb-6 text-red-500">
         <svg

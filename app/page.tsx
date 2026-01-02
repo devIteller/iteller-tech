@@ -11,7 +11,6 @@ import { WhyUsSection } from "@/components/WhyUsSection";
 export default function Home() {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
-      <Header />
       <main>
         <HeroSection />
         <AboutSection />
@@ -21,7 +20,6 @@ export default function Home() {
         <WhyUsSection />
         <CTASection />
       </main>
-      <Footer />
     </div>
   );
 }
