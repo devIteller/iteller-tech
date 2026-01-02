@@ -31,7 +31,7 @@ export default function ProductDetailPage() {
     <div className="min-h-screen bg-[#080c16]">
       {/* Hero */}
       <div
-        className="relative py-16 sm:py-34"
+        className="relative py-20 sm:py-34"
         style={{
           backgroundImage:
             "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 1440 283' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(14.52 20.919 -43.938 9.1299 511.22 166.42)'><stop stop-color='rgba(12,34,48,1)' offset='0'/><stop stop-color='rgba(8,12,22,1)' offset='1'/></radialGradient></defs></svg>\")",
