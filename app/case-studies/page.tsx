@@ -16,7 +16,7 @@ const Cases = [
   },
   {
     lable: "RWA",
-    title: "DReal Estate Tokenization",
+    title: "Real Estate Tokenization",
     description:
       "Tokenized a commercial real estate portfolio with investor portal and secondary trading.",
   },

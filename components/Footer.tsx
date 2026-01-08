@@ -3,11 +3,12 @@ import Link from "next/link";
 
 const footerLinks = {
   Solutions: [
-    { label: "AI Trading Bots", href: "/products/ai-trading-bots" },
+    { label: "Crypto ETF Platform", href: "/products/crypto-etf" },
+    { label: "AI Trading Bots", href: "/products/enterprise-kms" },
     { label: "CEX/DEX Development", href: "/products/cex-dex" },
     { label: "Tokenization & RWA", href: "/products/tokenization-rwa" },
     { label: "Neobank Platform", href: "/products/neobank" },
-    { label: "Payment Gateway", href: "/products/payment-gateway" },
+    { label: "Payment Gateway", href: "/products/payroom" },
   ],
   Company: [
     { label: "About Us", href: "/about" },

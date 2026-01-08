@@ -64,7 +64,7 @@ export default function Profile() {
             </Link>
           </div>
         </div>
-        <section className="mt-10">
+        <section className="mt-10 lg:mt-30">
           <div className="flex items-center gap-2 mb-5">
             <div className="w-10 h-10 rounded-lg bg-[#0D2330] text-primary flex items-center justify-center">
               <Users className="w-5 h-5" />

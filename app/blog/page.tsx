@@ -1,31 +1,32 @@
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
  
  
 
 const Cases = [
   {
-    lable: "CEX/DEX",
-    title: "Crypto Exchange Platform",
-    description:
-      "Built a high-performance centralized exchange with spot and margin trading for a Middle East broker.",
-  },
-  {
-    lable: "Digital Banking",
-    title: "Neobank Launch",
-    description:
-      "End-to-end digital bank platform with multi-currency accounts, cards, and crypto integration.",
-  },
-  {
     lable: "RWA",
-    title: "DReal Estate Tokenization",
+    title: "The Future of Tokenized Real-World Assets",
     description:
-      "Tokenized a commercial real estate portfolio with investor portal and secondary trading.",
+      "Exploring how tokenization is transforming traditional asset classes and opening new investment opportunities.",
   },
   {
-    lable: "Payments",
-    title: "Payment Gateway",
+    lable: "Exchanges",
+    title: "Building a Compliant Crypto Exchange",
     description:
-      "Built a cross-border payment platform with crypto settlement for an e-commerce marketplace.",
+      "Key considerations for launching a regulated cryptocurrency exchange in different jurisdictions.",
+  },
+  {
+    lable: "AI",
+    title: "AI in Financial Services: Practical Applications",
+    description:
+      "How AI is being used today in trading, risk management, and customer service.",
+  },
+  {
+    lable: "Neobank",
+    title: "Neobank Architecture Best Practices",
+    description:
+      "Technical considerations for building a modern digital bank platform.",
   },
 ];
 
@@ -41,19 +42,19 @@ export default function Blog() {
       >
         <div className="max-w-4xl mx-auto px-5 sm:px-6 text-center">
           <h1 className="text-white text-2xl sm:text-3xl lg:text-5xl font-bold mb-4">
-            Case Studies
+            Blog
           </h1>
           <p className="text-[#738bb1] max-w-xl mx-auto text-sm sm:text-lg leading-relaxed">
-            Real projects, real results. Explore how we&apos;ve helped companies
-            build and launch successful fintech products.
+            Insights, tutorials, and news from the iTeller Tech team on fintech,
+            blockchain, and AI.
           </p>
         </div>
       </div>
 
       <div className="mx-auto container gap-8 py-10">
         <p className="text-[#738bb1] max-w-2xl mx-auto text-sm sm:text-lg leading-relaxed text-center mb-14">
-          Detailed case studies coming soon. Contact us to discuss specific
-          project examples.
+          Our blog is launching soon. Subscribe to get notified when we publish
+          new content.
         </p>
 
         <section className="mx-auto px-5 sm:px-6 py-10 sm:py-14">
@@ -62,14 +63,28 @@ export default function Blog() {
               <AnimatedSection key={index} delay={index * 100}>
                 <div
                   key={index}
-                  className="bg-[#0b111d] border border-[#151b2b] rounded-lg p-5 h-full "
+                  className="bg-[#0b111d] hover:border-primary/30 group cursor-pointer transition-all duration-300 border border-[#151b2b] rounded-lg p-5 h-full "
                 >
                   <span className="text-primary">{item.lable}</span>
                   <h3 className="text-white text-lg md:text-2xl my-2 font-medium">
                     {item.title}
                   </h3>
                   <p className="text-[#738BB1] text-lg ">{item.description}</p>
-                  <div className="text-[#ABB9CF] pt-3 text-sm">Coming Soon</div>
+                  <div className="flex justify-between items-center flex-wrap gap-4 mt-3">
+                    <div className="flex flex-wrap gap-4">
+                      <div className="text-[#ABB9CF] text-sm flex gap-2 items-center">
+                        <Calendar />
+                        <span>Coming Soon</span>
+                      </div>
+                      <div className="text-[#ABB9CF] text-sm flex gap-2 items-center">
+                        <Clock />
+                        <span>5 min read</span>
+                      </div>
+                    </div>
+                    <button className=" inline-flex items-center gap-1 text-sm bg-white/5 rounded-full p-2  transition-all">
+                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    </button>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
