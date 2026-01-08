@@ -17,8 +17,8 @@ const navLinks = [
   { label: "About", href: "/about" },
   { label: "Solutions", href: "#solutions" },
   { label: "Products", href: "/products" },
-  { label: "Services", href: "#Services" },
-  { label: "Why Us", href: "#Why-Us" },
+  { label: "Services", href: "/services" },
+  { label: "Why Us", href: "/why-us" },
 ];
 
 export const Header = () => {

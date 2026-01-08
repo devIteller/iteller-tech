@@ -40,7 +40,7 @@ const Works = [
   },
 ];
 
-export default function ContactPage() {
+export default function About() {
   return (
     <div className="min-h-screen text-white">
       <div

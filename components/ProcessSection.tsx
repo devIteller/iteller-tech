@@ -1,7 +1,7 @@
 import { Search, Palette, Layout, Code, Shield, Rocket } from "lucide-react";
 import { AnimatedSection } from "./AnimatedSection";
 
-const steps = [
+export const ProcessSteps = [
   {
     number: "01",
     icon: Search,
@@ -64,7 +64,7 @@ export const ProcessSection = () => {
 
         {/* Process Steps */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {steps.map((step, index) => (
+          {ProcessSteps.map((step, index) => (
             <AnimatedSection key={step.number} delay={index * 100}>
               <div
                 className="relative p-6 rounded-2xl border border-white/5
