@@ -10,9 +10,9 @@ import {
 import { AnimatedSection } from "./AnimatedSection";
 import Link from "next/link";
 
-const platforms = [
+export const platforms = [
   {
-    url:"crypto-etf",
+    url: "crypto-etf",
     icon: LineChart,
     title: "Crypto OTC Platform",
     description:
@@ -20,7 +20,7 @@ const platforms = [
     tags: ["NAV Calculation", "Proof-of-Reserve", "Market-Making APIs"],
   },
   {
-    url:"neobank",
+    url: "neobank",
     icon: Coins,
     title: "Neobank Platform",
     description:
@@ -28,7 +28,7 @@ const platforms = [
     tags: ["Digital KYC", "Multi-Currency", "Crypto Integration"],
   },
   {
-    url:"tokenization-rwa",
+    url: "tokenization-rwa",
     icon: CreditCard,
     title: "Tokenization & RWA Suite",
     description:
@@ -36,7 +36,7 @@ const platforms = [
     tags: ["Smart Contracts", "Investor Portal", "Secondary Trading"],
   },
   {
-    url:"payroom",
+    url: "payroom",
     icon: Shield,
     title: "Payroom Safe-Payment",
     description:
@@ -44,7 +44,7 @@ const platforms = [
     tags: ["Escrow Payments", "Crypto Rails", "Payroll Management"],
   },
   {
-    url:"cex-dex",
+    url: "cex-dex",
     icon: ArrowRightLeft,
     title: "CEX / DEX Infrastructure",
     description:
@@ -52,7 +52,7 @@ const platforms = [
     tags: ["Order Matching", "Liquidity Pools", "Copy Trading"],
   },
   {
-    url:"enterprise-kms",
+    url: "enterprise-kms",
     icon: Cpu,
     title: "Enterprise Tools & APIs",
     description:

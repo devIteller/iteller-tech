@@ -3,14 +3,25 @@ import Link from "next/link";
 
 const footerLinks = {
   Solutions: [
-    "AI Trading Bots",
-    "CEX/DEX Development",
-    "Tokenization & RWA",
-    "Neobank Platform",
-    "Payment Gateway",
+    { label: "AI Trading Bots", href: "/products/ai-trading-bots" },
+    { label: "CEX/DEX Development", href: "/products/cex-dex" },
+    { label: "Tokenization & RWA", href: "/products/tokenization-rwa" },
+    { label: "Neobank Platform", href: "/products/neobank" },
+    { label: "Payment Gateway", href: "/products/payment-gateway" },
   ],
-  Company: ["About Us", "Products", "Services", "Why Us", "Contact"],
-  Resources: ["Company Profile", "Case Studies", "Documentation", "Blog"],
+  Company: [
+    { label: "About Us", href: "/about" },
+    { label: "Products", href: "/products" },
+    { label: "Services", href: "/services" },
+    { label: "Why Us", href: "/why-us" },
+    { label: "Contact", href: "/contact" },
+  ],
+  Resources: [
+    { label: "Company Profile", href: "/company-profile" },
+    { label: "Case Studies", href: "/case-studies" },
+    { label: "Documentation", href: "/docs" },
+    { label: "Blog", href: "/blog" },
+  ],
 };
 
 export const Footer = () => {
@@ -42,14 +53,14 @@ export const Footer = () => {
             <div key={category}>
               <h4 className="font-semibold text-foreground mb-4">{category}</h4>
               <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
+                {links.map(({ label, href }) => (
+                  <li key={label}>
+                    <Link
+                      href={href}
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
                     >
-                      {link}
-                    </a>
+                      {label}
+                    </Link>
                   </li>
                 ))}
               </ul>

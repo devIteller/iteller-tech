@@ -28,7 +28,7 @@ export default function ProductDetailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#080c16]">
+    <div className="min-h-screen bg-[#080c16] ">
       {/* Hero */}
       <div
         className="relative py-20 sm:py-34"
@@ -47,120 +47,129 @@ export default function ProductDetailPage() {
         </div>
       </div>
 
-      {/* Overview */}
-      <section className="max-w-7xl mx-auto px-5 sm:px-6 py-10 sm:py-14">
-        <h2 className="text-white text-xl sm:text-2xl font-semibold mb-3">
-          Overview
-        </h2>
-        <p className="text-[#738bb1] text-sm sm:text-lg leading-relaxed max-w-5xl">
-          {platform.overview}
-        </p>
-      </section>
-
-      {/* Who It's For */}
-      <section className="max-w-7xl mx-auto px-5 sm:px-6 py-10 sm:py-14">
-        <div className="flex items-center gap-3 mb-6 sm:mb-8">
-          <div className="bg-[#0e2637] p-2 rounded-lg">
-            <CheckCircle2 className="size-5 sm:size-6 text-[#21d5ed]" />
-          </div>
-          <h2 className="text-white text-xl sm:text-2xl font-semibold">
-            {platform.useCasesTitle}
+      <div className=" container mx-auto">
+        {/* Overview */}
+        <section className=" px-5 sm:px-6 py-10 sm:py-14">
+          <h2 className="text-white text-xl sm:text-2xl font-semibold mb-3">
+            Overview
           </h2>
-        </div>
+          <p className="text-[#738bb1] text-sm sm:text-lg leading-relaxed ">
+            {platform.overview}
+          </p>
+        </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
-          {platform.useCases.map((useCase, index) => (
-            <div
-              key={index}
-              className="bg-[#0a0f1a] border border-[#172436] rounded-lg p-4 flex gap-3"
-            >
-              <CheckCircle2 className="size-5 text-[#21d5ed] shrink-0" />
-              <p className="text-white text-sm sm:text-base leading-relaxed">
-                {useCase.text}
-              </p>
+        {/* Who It's For */}
+        <section className=" mx-auto px-5 sm:px-6 py-10 sm:py-14">
+          <div className="flex items-center gap-3 mb-6 sm:mb-8">
+            <div className="bg-[#0e2637] p-2 rounded-lg">
+              <CheckCircle2 className="size-5 sm:size-6 text-[#21d5ed]" />
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="max-w-7xl mx-auto px-5 sm:px-6 py-10 sm:py-14">
-        <div className="flex items-center gap-3 mb-6 sm:mb-8">
-          <div className="bg-[#0e2637] p-2 rounded-lg">
-            <CheckCircle2 className="size-5 sm:size-6 text-[#21d5ed]" />
+            <h2 className="text-white text-xl sm:text-2xl font-semibold">
+              {platform.useCasesTitle}
+            </h2>
           </div>
-          <h2 className="text-white text-xl sm:text-2xl font-semibold">
-            {platform.featuresTitle}
-          </h2>
-        </div>
 
-        <div className={`grid grid-cols-1 md:grid-cols-2 ${platform.id === "neobank" ? "lg:grid-cols-3" : ""} gap-4 sm:gap-5`}>
-          {platform.features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-[#0b111d] border border-[#151b2b] rounded-lg p-5 sm:p-6"
-            >
-              <div className="flex gap-3 mb-4">
-                <div className="bg-[#0e2637] p-2 rounded-lg">
-                  <CheckCircle2 className="size-4 sm:size-5 text-[#21d5ed]" />
-                </div>
-                <h3 className="text-white text-base sm:text-lg font-medium">
-                  {feature.title}
-                </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+            {platform.useCases.map((useCase, index) => (
+              <div
+                key={index}
+                className="bg-[#0a0f1a] border border-[#172436] rounded-lg p-4 flex gap-3"
+              >
+                <CheckCircle2 className="size-5 text-[#21d5ed] shrink-0" />
+                <p className="text-white text-sm sm:text-base leading-relaxed">
+                  {useCase.text}
+                </p>
               </div>
-
-              <ul className="space-y-2 text-[#738bb1] text-sm sm:text-base leading-relaxed">
-                {feature.items.map((item, i) => (
-                  <li key={i} className="flex gap-2">
-                    <span>•</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Why Choose */}
-      <section className="max-w-7xl mx-auto px-5 sm:px-6 py-10 sm:py-14">
-        <div className="flex items-center gap-3 mb-6 sm:mb-8">
-          <div className="bg-[#0e2637] p-2 rounded-lg">
-            <CheckCircle2 className="size-5 sm:size-6 text-[#21d5ed]" />
+            ))}
           </div>
-          <h2 className="text-white text-xl sm:text-2xl font-semibold">
-            {platform.keyFeaturesTitle}?
-          </h2>
-        </div>
+        </section>
 
-        <div className="space-y-4">
-          {platform.whyChoose.map((item, index) => (
-            <div
-              key={index}
-              className="bg-[#0a0f1a] border border-[#172436] rounded-lg p-4 flex gap-3"
-            >
-              <CheckCircle2 className="size-5 text-[#21d5ed] shrink-0" />
-              <p className="text-white text-sm sm:text-base leading-relaxed">
-                {item.text}
+        {/* Features */}
+        <section className="mx-auto px-5 sm:px-6 py-10 sm:py-14">
+          <div className="flex items-center gap-3 mb-6 sm:mb-8">
+            <div className="bg-[#0e2637] p-2 rounded-lg">
+              <CheckCircle2 className="size-5 sm:size-6 text-[#21d5ed]" />
+            </div>
+            <h2 className="text-white text-xl sm:text-2xl font-semibold">
+              {platform.featuresTitle}
+            </h2>
+          </div>
+
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 ${
+              platform.id === "neobank" ? "lg:grid-cols-3" : ""
+            } gap-4 sm:gap-5`}
+          >
+            {platform.features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-[#0b111d] border border-[#151b2b] rounded-lg p-5 sm:p-6"
+              >
+                <div className="flex gap-3 mb-4">
+                  <div className="bg-[#0e2637] p-2 rounded-lg">
+                    <CheckCircle2 className="size-4 sm:size-5 text-[#21d5ed]" />
+                  </div>
+                  <h3 className="text-white text-base sm:text-lg font-medium">
+                    {feature.title}
+                  </h3>
+                </div>
+
+                <ul className="space-y-2 text-[#738bb1] text-sm sm:text-base leading-relaxed">
+                  {feature.items.map((item, i) => (
+                    <li key={i} className="flex gap-2">
+                      <span>•</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Why Choose */}
+        <section className="mx-auto px-5 sm:px-6 py-10 sm:py-14">
+          <div className="flex items-center gap-3 mb-6 sm:mb-8">
+            <div className="bg-[#0e2637] p-2 rounded-lg">
+              <CheckCircle2 className="size-5 sm:size-6 text-[#21d5ed]" />
+            </div>
+            <h2 className="text-white text-xl sm:text-2xl font-semibold">
+              {platform.keyFeaturesTitle}?
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {platform.whyChoose.map((item, index) => (
+              <div
+                key={index}
+                className="bg-[#0a0f1a] border border-[#172436] rounded-lg p-4 flex gap-3"
+              >
+                <CheckCircle2 className="size-5 text-[#21d5ed] shrink-0" />
+                <p className="text-white text-sm sm:text-base leading-relaxed">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="bg-[#0C1220] mt-10 rounded-2xl py-16 px-8">
+            <div className="max-w-7xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-slate-400 mb-8 max-w-2xl mx-auto text-lg">
+                Need a reliable engine for your CEX or DEX? We&apos;ll help you
+                choose the right modules and architecture.
               </p>
+              <Link href="/contact-us">
+                <Button variant="hero" size="lg">
+                  Schedule a Consultation
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </Link>
             </div>
-          ))}
-        </div>
-        <div className="bg-[#0C1220] mt-10 rounded-2xl py-16 px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-slate-400 mb-8 max-w-2xl mx-auto text-lg">
-         Need a reliable engine for your CEX or DEX? We'll help you choose the right modules and architecture.
-            </p>
-            <Link href="/contact-us">
-              <Button variant="hero" size="lg">
-                Schedule a Consultation
-                <ArrowRight className="w-5 h-5" />
-              </Button>
-            </Link>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }

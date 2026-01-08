@@ -136,7 +136,7 @@ export const SolutionsSection = () => {
         </AnimatedSection>
 
         {/* Grid */}
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {solutionCategories.map((category, categoryIndex) => {
             const Icon = category.icon;
             const accent = accentTokens[category.accent];
