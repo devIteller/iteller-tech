@@ -1,5 +1,4 @@
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { ProcessSteps } from "@/components/ProcessSection";
 import { CheckCircle2, TrendingUp } from "lucide-react";
 
 const Specializations = [
@@ -7,7 +6,7 @@ const Specializations = [
   "Banking & payment flows",
   "KYC/AML, KYT and compliance",
   "Security and uptime requirements",
- ];
+];
 
 const Provens = [
   "Platforms already processing real deposits, withdrawals and trades",
@@ -21,11 +20,11 @@ const Securities = [
   "Monitoring, alerting and backup strategies",
 ];
 
- const Collaborations = [
-   "Start fast with a white-label solution",
-   "Or design something unique from scratch",
-   "Transparent communication, regular demos, clear documentation",
- ];
+const Collaborations = [
+  "Start fast with a white-label solution",
+  "Or design something unique from scratch",
+  "Transparent communication, regular demos, clear documentation",
+];
 
 export default function WhyUs() {
   return (

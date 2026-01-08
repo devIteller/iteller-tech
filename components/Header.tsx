@@ -84,7 +84,7 @@ export const Header = () => {
                   <Menu size={24} />
                 </button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px]">
+              <SheetContent side="right" className="w-75">
                 <SheetHeader>
                   <SheetTitle>iTeller</SheetTitle>
                 </SheetHeader>

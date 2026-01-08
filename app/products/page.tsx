@@ -1,47 +1,8 @@
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { platforms } from "@/components/ProductsSection";
-import { ArrowRight, Cpu, TrendingUp } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-
-const Mission = [
-  {
-    title: "Escrow-Style Safe Payments",
-    description:
-      "To make advanced financial and AI infrastructure accessible to companies of any size – from early-stage startups to established banks and brokers.",
-  },
-  {
-    title: "Our Vision",
-    description:
-      "A world where money, data and value move instantly and intelligently across borders.",
-  },
-];
-
-const Differents = [
-  "Focused purely on fintech, payments, trading and AI",
-  "Experienced in regulated environments (KYC/AML, risk, security)",
-  "Mix of product thinking + hardcore engineering",
-  "Ready-made platforms plus custom development",
-];
-
-const Teams = [
-  "Backend engineers (PHP, Go, Node.js, Python)",
-  "Frontend & mobile developers (React, Vue, React Native)",
-  "Blockchain & smart contract specialists",
-  "AI/ML & data engineers",
-  "DevOps & security engineers",
-  "Product managers & business analysts",
-];
-
-const Works = [
-  {
-    title: "Dubai",
-    description: "Business, product and client success",
-  },
-  {
-    title: "Tehran & Remote",
-    description: "R&D, engineering and AI",
-  },
-];
+ 
 
 export default function Product() {
   return (

@@ -167,7 +167,7 @@ export const SolutionsSection = () => {
                         delay={categoryIndex * 150 + solutionIndex * 100 + 200}
                       >
                         <div
-                          className={`group flex items-center h-[120px] gap-3 rounded-xl border-2 border-[#151B2B] bg-[#0B111D] p-5 transition-all duration-300 ${accent.hoverBorder}`}
+                          className={`group flex items-center h-30 gap-3 rounded-xl border-2 border-[#151B2B] bg-[#0B111D] p-5 transition-all duration-300 ${accent.hoverBorder}`}
                         >
                           <div
                             className={`flex h-10 w-10 p-2 items-center justify-center rounded-lg ${accent.base}`}
