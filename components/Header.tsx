@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/sheet";
 import Link from "next/link";
 import Image from "next/image";
+import CalElementClick from "./CalElementClick";
 
 const navLinks = [
   { label: "About", href: "/about" },
@@ -72,9 +73,11 @@ export const Header = () => {
               <Button variant="ghost" size="sm">
                 Download Profile
               </Button>
-              <Button variant="hero" size="sm">
-                Book Consulation
-              </Button>
+              <CalElementClick
+                calLink="iteller/30min"
+                namespace=""
+                config={{ layout: "month_view" }}
+              />
             </div>
 
             {/* Mobile Menu */}
@@ -107,9 +110,11 @@ export const Header = () => {
                   <Button variant="ghost" className="w-full">
                     Download Profile
                   </Button>
-                  <Button variant="hero" className="w-full">
-                    Book Consultation
-                  </Button>
+                  <CalElementClick
+                    calLink="iteller/30min"
+                    namespace=""
+                    config={{ layout: "month_view" }}
+                  />
                 </div>
               </SheetContent>
             </Sheet>
