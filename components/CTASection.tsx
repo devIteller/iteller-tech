@@ -7,17 +7,17 @@ import { AnimatedSection } from "./AnimatedSection";
 const contacts = [
   {
     label: "Email",
-    value: "contact@iTeller.agency",
+    value: "Support@iteller.tech",
     icon: Mail,
   },
   {
     label: "Phone / WhatsApp",
-    value: "+971 xxx xxx xxx",
+    value: "+971567778795",
     icon: Phone,
   },
   {
     label: "Location",
-    value: "Dubai · Tehran · Remote",
+    value: "Dubai , UAE",
     icon: MapPin,
   },
 ];
