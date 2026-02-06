@@ -34,10 +34,6 @@ const Works = [
     title: "Dubai",
     description: "Business, product and client success",
   },
-  {
-    title: "Tehran & Remote",
-    description: "R&D, engineering and AI",
-  },
 ];
 
 export default function About() {
